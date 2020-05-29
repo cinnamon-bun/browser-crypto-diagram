@@ -1,0 +1,20 @@
+digraph {
+    rankdir=TB;
+    subgraph cluster_0 {
+        label="Color key";
+        // pure js adding functionality: blue
+        pure_js_functionality [style=filled, color="cyan2"];
+
+        // API wrapper or swapper
+        api_wrapper [style=filled, color="olivedrab3"];
+
+        // low level pure js: dodgerblue1
+        low_level_js [style=filled, color="dodgerblue1"];
+
+        // webassembly
+        webassembly [style=filled, color="orange"];
+
+        // native: red
+        native [style=filled, color="brown2"];
+    }
+}

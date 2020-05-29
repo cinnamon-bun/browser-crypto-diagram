@@ -1,0 +1,59 @@
+digraph {
+    rankdir=TB;
+
+    chloride -> sodium_browserify;
+    chloride -> sodium_browserify_tweetnacl;
+    chloride -> sodium_chloride;
+    chloride -> sodium_native;
+    ed2curve -> tweetnacl;
+    libsodium_wrappers -> libsodium;
+    noble_ed25519;
+    private_box -> chloride;
+    sodium_browserify -> libsodium_wrappers;
+    sodium_browserify -> sha_js;
+    sodium_browserify -> sodium_browserify_tweetnacl;
+    sodium_browserify -> tweetnacl;
+    sodium_browserify_tweetnacl -> ed2curve;
+    sodium_browserify_tweetnacl -> sha_js;
+    sodium_browserify_tweetnacl -> tweetnacl;
+    sodium_browserify_tweetnacl -> tweetnacl_auth;
+    sodium_javascript -> blake2b;
+    blake2b -> blake2b_wasm;
+    sodium_javascript -> siphash24;
+    sodium_javascript -> xsalsa20;
+    sodium_universal -> sodium_javascript;
+    sodium_universal -> sodium_native;
+    ssb_keys -> chloride;
+    ssb_keys -> private_box;
+    tweetnacl_auth -> tweetnacl;
+
+    // pure js adding functionality: blue
+    private_box [style=filled, color="cyan2"];
+    tweetnacl_auth [style=filled, color="cyan2"];
+    ed2curve [style=filled, color="cyan2"];
+
+    // API wrapper or swapper
+    ssb_keys [style=filled, color="olivedrab3"];
+    chloride [shape=house, style=filled, color="olivedrab3"];
+    sodium_browserify [shape=box, style=filled, color="olivedrab3"];
+    sodium_browserify_tweetnacl [shape=box, style=filled, color="olivedrab3"];
+    sodium_chloride [shape=house, style=filled, color="olivedrab3"];
+    sodium_javascript [shape=box, style=filled, color="olivedrab3"];
+    sodium_universal [shape=box, style=filled, color="olivedrab3"];
+
+    // low level pure js
+    sha_js [style=filled, color="dodgerblue1"];
+    tweetnacl [style=filled, color="dodgerblue1"];
+    noble_ed25519 [style=filled, color="dodgerblue1"];
+    blake2b [style=filled, color="dodgerblue1"];
+
+    // webassembly
+    libsodium_wrappers [shape=box, style=filled, color="orange"];
+    libsodium [style=filled, color="orange"];
+    blake2b_wasm [style=filled, color="orange"];
+    siphash24 [style=filled, color="orange"];
+    xsalsa20 [style=filled, color="orange"];
+
+    // native: red
+    sodium_native [shape=box, style=filled, color="brown2"];
+}

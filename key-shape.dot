@@ -1,0 +1,9 @@
+digraph {
+    rankdir=TB;
+    subgraph cluster_1 {
+        label="Shape key";
+        sodium_api [shape="box"];
+        chloride_api [shape="house"];
+        other_modules;
+    }
+}
